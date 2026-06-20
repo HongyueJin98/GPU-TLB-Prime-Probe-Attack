@@ -1,0 +1,42 @@
+Data Processing Scripts
+
+
+Overview
+
+This directory contains a series of Python scripts designed for processing data collected using the Time Measurement Tool and Prime Probe Tool. These scripts analyze, extract, and map timing data to generate meaningful boundaries for further analysis.
+
+
+Included Scripts
+
+calculate_time.py: Computes the average and median from raw timing data and saves the results.
+
+extract_data.py: Organizes data from multiple entries and structures it into a CSV file, grouping data based on different hash sets.
+
+get_chart.py: Uses generated_data.csv to generate a mapping and plots different hash set mapping curves. The tool ensures that the mappings are monotonic increasing and saves the visualized results.
+
+calculate_bound.py: Uses least squares fitting and linear interpolation to generate a boundary CSV file (mapping_table.csv). The boundary represents the maximum values within a dataset.
+
+
+Purpose
+
+These data processing scripts help in refining and structuring the collected data, ensuring proper boundary generation for subsequent analysis.
+
+
+Usage
+
+Each script can be run independently based on the required data processing step. Make sure to have the necessary dependencies installed before execution.
+
+
+Dependencies
+
+Python 3.x
+
+Pandas for handling CSV files
+
+NumPy for numerical computations
+
+Matplotlib (if plotting is required)
+
+Ensure that the required data files are available before executing the scripts.
+
+

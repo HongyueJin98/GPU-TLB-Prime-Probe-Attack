@@ -1,0 +1,70 @@
+Website Fingerprinting Tool
+
+
+Overview
+
+This directory contains all Python scripts necessary for performing website fingerprinting attacks. The setup requires two virtual machines and an additional host machine.
+
+
+Requirements
+
+The environment setup is the same as the previous tools, requiring:
+
+Ubuntu 20 as the attacker's virtual machine
+
+Windows 11 (4K display) as the victim's virtual machine (accessed via RDP)
+
+GCC: gcc-11.4
+
+CUDA: CUDA 12.6
+
+Vulkan: Vulkan 1.2.131
+
+
+Included Files
+
+The folder contains the following scripts and binaries:
+
+dummy.cu
+
+dummy
+
+get-position.py
+
+web-attacker.py
+
+web-victim.py
+
+
+Setup and Execution
+
+Step 1: Configure the Attacker Virtual Machine (Ubuntu 20)
+
+Place web-attacker.py, dummy, and the prime_probe binary (generated from the Prime Probe Tool) in the attacker's VM directory.
+
+Ensure the system meets the Ubuntu 20 requirements.
+
+Step 2: Configure the Victim Machine (Windows 11)
+
+Open Microsoft Edge and set the homepage to about:blank.
+
+Run Remote Desktop Protocol (RDP) to connect from the host machine to the Windows 11 virtual machine.
+
+Place web-victim.py on the host machine.
+
+Step 3: Running the Attack
+
+On the host machine, run:
+
+python3 web-victim.py
+
+On the attacker's virtual machine, run:
+
+python3 web-attacker.py
+
+
+Adjusting Mouse Position
+
+If the automation is not precise enough, run get-position.py to reconfigure mouse positioning and ensure proper execution of the scripts.
+
+

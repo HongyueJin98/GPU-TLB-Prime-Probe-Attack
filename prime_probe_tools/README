@@ -1,0 +1,61 @@
+Prime Probe Tool
+
+Overview
+
+This directory contains the implementation of a Prime Probe tool using Vulkan and CUDA. The source files included in this project are:
+
+vulkan_buffer.cpp
+
+prime_probe.cu
+
+instruction_chain.cu
+
+instruction_chain.h
+
+Makefile
+
+The tool leverages Vulkan for buffer management and CUDA for executing the Prime Probe cache attack.
+
+
+Requirements
+
+To compile and run this tool, ensure your system has the following dependencies installed:
+
+GCC: gcc-11.4, g++-11.4
+
+CUDA: CUDA 12.6
+
+Vulkan: Vulkan 1.2.131
+
+
+Vulkan Installation
+
+Vulkan must be installed following the official Vulkan tutorial. Detailed instructions can be found here:
+
+https://vulkan-tutorial.com/
+
+Compilation and Execution
+
+To build the project, simply run:
+
+make
+
+Once compiled, you can execute the tool using:
+
+./prime_probe
+
+
+Configuration
+
+Users can modify the following parameters in prime_probe.cu:
+
+LOOP_NUM: Determines the number of Prime Probe iterations.
+
+TIME_BUF_SIZE: If LOOP_NUM is set greater than 4000, you must increase TIME_BUF_SIZE to expand the memory buffer for storing time measurements.
+
+
+Code Reference
+
+For further details on implementation, refer to the code comments in the source files.
+
+

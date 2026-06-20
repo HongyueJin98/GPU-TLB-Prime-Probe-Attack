@@ -1,0 +1,61 @@
+Timing Measurement Tool
+
+
+Overview
+
+This tool is designed for timing measurement in a system using Vulkan and CUDA. It allows for different configurations to analyze timing variations when accessing different numbers of entries in the same hash set.
+
+
+Requirements
+
+The setup environment remains the same as the Prime Probe tool, requiring:
+
+GCC: gcc-11.4
+
+CUDA: CUDA 12.6
+
+Vulkan: Vulkan 1.2.131
+
+
+Included Files
+
+The tool consists of the following source files:
+
+dummy.cu
+
+dummy
+
+pointer_chasing_l3.cu
+
+vulkan_buffer.cpp
+
+Makefile
+
+
+Compilation and Execution
+
+To compile the tool, simply run:
+
+make
+
+This will generate the executable pointer_chasing_l3. To run the tool, execute:
+
+./pointer_chasing_l3
+
+
+Configuration
+
+Users can modify the following parameters in pointer_chasing_l3.cu:
+
+L3_ENTRY_NUM: Determines the number of entries accessed in the same hash set.
+
+START_SET and END_SET: Define the hash set range for pointer chasing.
+
+
+Usage with Prime Probe Tool
+
+dummy represents the scenario where zero entries are accessed.
+
+By changing L3_ENTRY_NUM and running the Prime Probe Tool on another virtual machine, users can measure the timing impact of accessing different numbers of entries in this virtual machine.
+
+
