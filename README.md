@@ -68,7 +68,7 @@ Exploiting TLBs in Virtualized GPUs for Cross-VM Side-Channel Attacks
 
 NDSS 2026
 
-Paper link:https://www.ndss-symposium.org/ndss-paper/exploiting-tlbs-in-virtualized-gpus-for-cross-vm-side-channel-attacks/.
+Paper link: https://www.ndss-symposium.org/ndss-paper/exploiting-tlbs-in-virtualized-gpus-for-cross-vm-side-channel-attacks/.
 
 ---
 
